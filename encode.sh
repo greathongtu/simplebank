@@ -21,3 +21,5 @@ base64_encoded_content=$(base64 < "$input_file")
 # Print the base64-encoded content
 echo "$base64_encoded_content"
 
+
+# use something like "$base64_encoded_content | base64 --decode > .env"
