@@ -22,7 +22,7 @@ jobs:
 
     - name: Load secrets and save to app.env
       run: |
-        echo "${{ secrets.ENV_FILE }}" > app.env
+        echo "${{ secrets.ENV_FILE }}" | base64 --decode > app.env
 
     - name: Login to Amazon ECR
       id: login-ecr
